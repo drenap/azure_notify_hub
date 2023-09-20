@@ -1,6 +1,6 @@
 # Microsoft Azure Notification Hubs wrapper for Flutter
 
-This is a **work in progress**. View todos in our [issues page](https://github.com/rswiftoffice/azure-notificationhubs-flutter/issues/1) for more information. Please submit PR!
+This is a **work in progress**. View todos in our [issues page]() for more information. Please submit PR!
 
 Microsoft Azure Notification Hubs provide a multiplatform, scaled-out push infrastructure that enables you to send mobile push notifications from any backend (in the cloud or on-premises) to any mobile platform. To learn more, visit the [Developer Center](https://azure.microsoft.com/en-us/documentation/services/notification-hubs).
 
