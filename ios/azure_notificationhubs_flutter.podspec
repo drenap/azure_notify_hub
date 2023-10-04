@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'azure_notify_hub'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
 A new flutter plugin project.
@@ -16,7 +16,7 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '12.0'
   s.dependency 'AzureNotificationHubs-iOS'
   s.static_framework = true
 

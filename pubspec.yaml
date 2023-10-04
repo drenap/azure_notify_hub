@@ -5,6 +5,7 @@ homepage: https://github.com/GhostBman/azure_notify_hub.git
 
 environment:
   sdk: '>=3.1.2 <4.0.0'
+  flutter: ">=3.13.4"
 
 dependencies:
   flutter:
@@ -14,7 +15,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
+
 flutter:
   plugin:
-    androidPackage: com.multicode.azure_notify_hub
-    pluginClass: AzureNotificationhubsFlutterPlugin
+    platforms:
+      ios:
+        pluginClass: AzureNotificationhubsFlutterPlugin
+      android:
+        package: com.multicode.azure_notify_hub
+        pluginClass: AzureNotificationhubsFlutterPlugin
