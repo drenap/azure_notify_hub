@@ -2,5 +2,5 @@
 #import <WindowsAzureMessaging/WindowsAzureMessaging.h>
 #import <UserNotifications/UserNotifications.h> 
 
-@interface AzureNotificationhubsFlutterPlugin : NSObject<FlutterPlugin>
+@interface azure_notify_hub : NSObject<FlutterPlugin>
 @end

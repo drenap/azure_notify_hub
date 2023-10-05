@@ -1,7 +1,7 @@
-#import "AzureNotificationhubsFlutterPlugin.h"
+#import "azure_notify_hub_Plugin.h"
 #import "Constants.h"
 
-@implementation AzureNotificationhubsFlutterPlugin {
+@implementation azure_notify_hub {
   FlutterMethodChannel *_channel;
   NSDictionary *_launchNotification;
   BOOL _resumingFromBackground;
@@ -11,7 +11,7 @@
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"azure_notify_hub"
             binaryMessenger:[registrar messenger]];
-  AzureNotificationhubsFlutterPlugin* instance = [[AzureNotificationhubsFlutterPlugin alloc] initWithChannel:channel];
+  azure_notify_hub* instance = [[azure_notify_hub alloc] initWithChannel:channel];
   [registrar addApplicationDelegate:instance];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
