@@ -61,7 +61,7 @@ public class NotificationService extends FirebaseMessagingService {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             mNotificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
             PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0,
-                intent, PendingIntent.FLAG_ONE_SHOT);
+                intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE);
             Resources resources = ctx.getPackageManager().getResourcesForApplication(packageName);
             int resId = resources.getIdentifier("ic_launcher", "mipmap", packageName);
             Drawable icon = resources.getDrawable(resId);
