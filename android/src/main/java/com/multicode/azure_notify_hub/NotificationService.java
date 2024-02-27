@@ -46,10 +46,12 @@ public class NotificationService extends FirebaseMessagingService {
         Intent intent = new Intent(ACTION_REMOTE_MESSAGE);
         intent.putExtra(EXTRA_REMOTE_MESSAGE, message);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
-        sendNotification(content);
+        if (message.getNotification().getTitle() != null) {
+            sendNotification(message.getNotification().getTitle(), message.getNotification().getBody(), content);
+        }
     }
 
-    private void sendNotification(Map<String, Object> content) {
+    private void sendNotification(String title, String body, Map<String, Object> content) {
         ctx = getApplicationContext();
         Class mainActivity;
         try {
@@ -68,8 +70,8 @@ public class NotificationService extends FirebaseMessagingService {
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(
                     ctx,
                     NOTIFICATION_CHANNEL_ID)
-                .setContentTitle(((Map) content.get("data")).get("title").toString())
-                .setContentText(((Map) content.get("data")).get("body").toString())
+                .setContentTitle(title)
+                .setContentText(body)
                 .setDefaults(DEFAULT_SOUND | DEFAULT_VIBRATE | DEFAULT_ALL)
                 .setPriority(PRIORITY_HIGH)
                 .setSmallIcon(R.drawable.ic_menu_manage)
