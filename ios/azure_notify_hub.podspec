@@ -11,13 +11,14 @@ A new flutter plugin project.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Datamine' => 'andrew.napitupulu@dataminesoftware.com' }
   s.source           = { :path => '.' }
+#   s.source           = { :git => "https://drenap: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@github.com/Azure/azure-notificationhubs-ios" }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.platform = :ios, '12.0'
-  s.dependency 'azure_notify_hub-iOS'
+  s.dependency 'AzureNotificationHubs-iOS'
   s.static_framework = true
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
