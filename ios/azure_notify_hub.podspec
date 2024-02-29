@@ -12,9 +12,9 @@ A new flutter plugin project.
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Datamine' => 'andrew.napitupulu@dataminesoftware.com' }
-  s.source           = { :path => '.' }
-#   s.source           = { :git => "https://drenap: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@github.com/Azure/azure-notificationhubs-ios" }
-  s.source_files = 'Classes/**/*'
+#   s.source           = { :path => '.' }
+  s.source           = { :git => "https://github.com/Azure/azure-notificationhubs-ios.git", :tag => "3.1.5" }
+  s.source_files     = 'Classes/**/*.{h,m}'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.platform = :ios, '12.0'
